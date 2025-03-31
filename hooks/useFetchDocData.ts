@@ -1,8 +1,9 @@
 import { getDocument } from "@/firebase/getDocument";
 import { useEffect, useState } from "react";
+import { ILandingPage } from "@/tools/interfaces/ILandingPage";
 
-const useFetchData = (company?: string) => {
-  const [data, setData] = useState<any>();
+const useFetchData = (slug?: string) => {
+  const [data, setData] = useState<ILandingPage | undefined>();
 
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -10,7 +11,7 @@ const useFetchData = (company?: string) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await getDocument("landing_pages", company || "");
+        const res = await getDocument("landing_pages", slug || "");
         if (res) {
           setData(res);
         } else {
@@ -23,10 +24,10 @@ const useFetchData = (company?: string) => {
       }
     };
 
-    if (company) {
+    if (slug) {
       fetchData();
     }
-  }, [company]);
+  }, [slug]);
 
   return { data, loading, error };
 };
