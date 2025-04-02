@@ -42,6 +42,12 @@ export function LandingPageLayout({
               </div>
             </div>
             <div className="flex items-center gap-4">
+              <a
+                href="/admin"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Admin
+              </a>
               <ModeToggle />
               <Button>Get Started</Button>
             </div>
