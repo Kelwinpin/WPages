@@ -10,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle2, Star, ArrowRight, CheckCheck } from "lucide-react";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
+import FAQ from "@/components/FAQ";
 
 interface PageProps {
   params: {
@@ -112,7 +113,7 @@ export default function Page({ params }: PageProps) {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20">
+      {/* <section id="pricing" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Planos Simples e Transparentes</h2>
@@ -197,50 +198,35 @@ export default function Page({ params }: PageProps) {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Perguntas Frequentes</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Respostas para as dúvidas mais comuns
-            </p>
-          </div>
-          <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="w-full">
-              {[
-                {
-                  question: "Quanto tempo leva para configurar uma landing page?",
-                  answer: "Você pode ter sua landing page pronta em minutos. Nossa plataforma foi projetada para ser intuitiva e fácil de usar, permitindo que você crie páginas de alta conversão rapidamente."
-                },
-                {
-                  question: "Preciso ter conhecimentos técnicos?",
-                  answer: "Não, nossa plataforma foi desenvolvida para ser usada por qualquer pessoa, independentemente do nível técnico. Não é necessário saber programação ou design."
-                },
-                {
-                  question: "Posso integrar com outras ferramentas?",
-                  answer: "Sim, oferecemos integrações com as principais ferramentas de marketing, CRMs, plataformas de e-mail marketing e sistemas de pagamento."
-                },
-                {
-                  question: "Como funciona o teste gratuito?",
-                  answer: "Você tem acesso a todas as funcionalidades do plano Profissional por 14 dias, sem necessidade de cartão de crédito. Ao final do período, você pode escolher o plano que melhor atende às suas necessidades."
-                },
-                {
-                  question: "Posso cancelar a qualquer momento?",
-                  answer: "Sim, não há contratos de longo prazo. Você pode cancelar sua assinatura a qualquer momento, sem taxas adicionais."
-                },
-              ].map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
-                  <AccordionContent>{faq.answer}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </div>
-      </section>
+      <FAQ
+        title="Perguntas Frequentes"
+        description="Respostas para as dúvidas mais comuns"
+        accordions={[
+          {
+            question: "Quanto tempo leva para configurar uma landing page?",
+            answer: "Você pode ter sua landing page pronta em minutos. Nossa plataforma foi projetada para ser intuitiva e fácil de usar, permitindo que você crie páginas de alta conversão rapidamente."
+          },
+          {
+            question: "Preciso ter conhecimentos técnicos?",
+            answer: "Não, nossa plataforma foi desenvolvida para ser usada por qualquer pessoa, independentemente do nível técnico. Não é necessário saber programação ou design."
+          },
+          {
+            question: "Posso integrar com outras ferramentas?",
+            answer: "Sim, oferecemos integrações com as principais ferramentas de marketing, CRMs, plataformas de e-mail marketing e sistemas de pagamento."
+          },
+          {
+            question: "Como funciona o teste gratuito?",
+            answer: "Você tem acesso a todas as funcionalidades do plano Profissional por 14 dias, sem necessidade de cartão de crédito. Ao final do período, você pode escolher o plano que melhor atende às suas necessidades."
+          },
+          {
+            question: "Posso cancelar a qualquer momento?",
+            answer: "Sim, não há contratos de longo prazo. Você pode cancelar sua assinatura a qualquer momento, sem taxas adicionais."
+          },
+        ]}
+      />
 
       {/* Contact Form Section */}
       <section id="contact" className="py-20">
