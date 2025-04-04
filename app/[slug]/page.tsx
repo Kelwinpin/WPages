@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle2, Star, ArrowRight, CheckCheck } from "lucide-react";
 import Hero from "@/components/Hero";
+import Features from "@/components/Features";
 
 interface PageProps {
   params: {
@@ -39,43 +40,27 @@ export default function Page({ params }: PageProps) {
       <Hero title={data?.title} />
 
       {/* Features Section */}
-      <section id="features" className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Recursos Poderosos</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Tudo que você precisa para criar experiências de alta conversão
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Otimização Inteligente',
-                description: 'Algoritmos avançados que ajustam automaticamente sua página para maximizar conversões.',
-                icon: <CheckCircle2 className="h-10 w-10 text-primary mb-4" />,
-              },
-              {
-                title: 'Análise em Tempo Real',
-                description: 'Acompanhe o desempenho da sua página com métricas detalhadas e insights acionáveis.',
-                icon: <CheckCircle2 className="h-10 w-10 text-primary mb-4" />,
-              },
-              {
-                title: 'Personalização Avançada',
-                description: 'Adapte cada elemento para seu público-alvo e aumente significativamente suas taxas de conversão.',
-                icon: <CheckCircle2 className="h-10 w-10 text-primary mb-4" />,
-              },
-            ].map((feature, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-6">
-                  {feature.icon}
-                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Features 
+        title="Recursos Poderosos"
+        description="Tudo que você precisa para criar experiências de alta conversão"
+        cards={[
+          {
+            title: 'Otimização Inteligente',
+            description: 'Algoritmos avançados que ajustam automaticamente sua página para maximizar conversões.',
+            icon: "CheckCircle2",
+          },
+          {
+            title: 'Análise em Tempo Real',
+            description: 'Acompanhe o desempenho da sua página com métricas detalhadas e insights acionáveis.',
+            icon: "CheckCircle2",
+          },
+          {
+            title: 'Personalização Avançada',
+            description: 'Adapte cada elemento para seu público-alvo e aumente significativamente suas taxas de conversão.',
+            icon: "CheckCircle2",
+          },
+        ]}
+      />
 
       {/* Testimonials Section */}
       <section className="py-20 bg-muted/30">
