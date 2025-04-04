@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle2, Star, ArrowRight, CheckCheck } from "lucide-react";
+import Hero from "@/components/Hero";
 
 interface PageProps {
   params: {
@@ -35,34 +36,7 @@ export default function Page({ params }: PageProps) {
       footer={data?.footer}
     >
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-background to-muted/30">
-        <div className="container mx-auto text-center">
-          <div className="inline-block mb-6 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-            Solução Exclusiva
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-            {data?.title || 'Transforme Visitantes em Clientes'}
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Nossa plataforma oferece tudo que você precisa para aumentar suas conversões e impulsionar seus resultados de negócio.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button size="lg" className="w-full sm:w-auto px-8 py-6 text-lg">
-              Começar Agora <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto px-8 py-6 text-lg">
-              Ver Demonstração
-            </Button>
-          </div>
-          <div className="flex items-center justify-center gap-2 text-muted-foreground">
-            <CheckCheck className="h-5 w-5 text-primary" />
-            <span className="text-sm">Teste grátis por 14 dias</span>
-            <span className="mx-2">•</span>
-            <CheckCheck className="h-5 w-5 text-primary" />
-            <span className="text-sm">Sem necessidade de cartão de crédito</span>
-          </div>
-        </div>
-      </section>
+      <Hero title={data?.title} />
 
       {/* Features Section */}
       <section id="features" className="py-20">
