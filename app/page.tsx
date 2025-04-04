@@ -24,11 +24,7 @@ export default function Home() {
           { href: '/careers', label: 'Careers' },
           { href: '/support', label: 'Support' },
           { href: '/sitemap', label: 'Sitemap' },
-        ],
-        socialLinks: [
-          { href: 'https://github.com', icon: <Github className="h-5 w-5" /> },
-          { href: 'https://twitter.com', icon: <Twitter className="h-5 w-5" /> },
-        ],
+        ]
       }}
     >
       <section className="py-20 px-4">
@@ -53,8 +49,8 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Construtor com Drag & Drop',
-                description: 'Monte suas páginas com facilidade usando nossa interface intuitiva de arrastar e soltar.',
+                title: 'Construtor in time view',
+                description: 'Monte suas páginas com facilidade usando nossa interface intuitiva.',
               },
               {
                 title: 'Design Responsivo',

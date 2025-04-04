@@ -140,7 +140,7 @@ export default function Page({ params }: PageProps) {
                       <Star key={i} className="h-5 w-5 text-yellow-500 fill-yellow-500" />
                     ))}
                   </div>
-                  <p className="mb-6 italic">"{testimonial.quote}"</p>
+                  <p className="mb-6 italic">{testimonial.quote}</p>
                   <div>
                     <p className="font-semibold">{testimonial.author}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.company}</p>

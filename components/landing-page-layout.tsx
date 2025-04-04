@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { Button } from '@/components/ui/button';
 import { ModeToggle } from '@/components/mode-toggle';
 
 interface LandingPageLayoutProps {
@@ -42,14 +41,7 @@ export function LandingPageLayout({
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <a
-                href="/admin"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Admin
-              </a>
               <ModeToggle />
-              <Button>Get Started</Button>
             </div>
           </nav>
         </div>

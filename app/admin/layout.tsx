@@ -18,14 +18,6 @@ export default function AdminLayout({
                             <Link href="/" className="text-xl font-bold">
                                 Landing Page Generator
                             </Link>
-                            <div className="hidden md:flex items-center gap-4">
-                                <Link
-                                    href="/admin"
-                                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                                >
-                                    Administração
-                                </Link>
-                            </div>
                         </div>
                         <div className="flex items-center gap-4">
                             <ModeToggle />
